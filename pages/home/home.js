@@ -17,7 +17,7 @@
             list.groupDataSource = titlesListGrouped.groups.dataSource;
             list.groupHeaderTemplate = q("#headertemplate");
 
-            WinJS.xhr({ url: "http://odata.netflix.com/Catalog/Titles?$format=json&$top=200" })
+            WinJS.xhr({ url: "http://odata.netflix.com/Catalog/Titles?$format=json&$select=ShortName,BoxArt&$top=200" })
                 .then(function (xhr) {
                     var titles = JSON.parse(xhr.response).d;
                     titles.forEach(function (i) {
