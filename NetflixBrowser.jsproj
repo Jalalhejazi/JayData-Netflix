@@ -32,7 +32,7 @@
     <ProjectConfiguration Include="Release|x86">
       <Configuration>Release</Configuration>
       <Platform>x86</Platform>
-    </ProjectConfiguration>  
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>8587e0e0-273a-4536-9584-2b26e1213b2b</ProjectGuid>
@@ -55,8 +55,12 @@
     <Content Include="images\smalllogo.png" />
     <Content Include="images\splashscreen.png" />
     <Content Include="images\storelogo.png" />
+    <Content Include="js\datajs-1.0.2.js" />
     <Content Include="js\default.js" />
+    <Content Include="js\JayData-vsdoc.js" />
+    <Content Include="js\JayData.js" />
     <Content Include="js\navigator.js" />
+    <Content Include="js\netflix.js" />
     <Content Include="pages\home\home.css" />
     <Content Include="pages\home\home.html" />
     <Content Include="pages\home\home.js" />
