@@ -1,5 +1,5 @@
 #Metro style Netflix Browser using JayData
-The initial commit is based on code by Jeremy Foster, that is covered in detail in [this blog][1].
+The initial commit is code by Jeremy Foster, that is covered in detail in [this blog][1].
 
 You need to have Windows 8 and Visual studio 2012 RC up and running in order to work with.
 
