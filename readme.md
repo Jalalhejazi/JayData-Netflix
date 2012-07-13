@@ -5,9 +5,9 @@ You need to have Windows 8 and Visual studio 2012 RC up and running in order to 
 
 
 ## Modifications:
-1. Adding Odata `$select=ShortName,BoxArt` to reduce amount of OData traffic
-2. Added [required files] to work with JayData
-3. Replaced `WinJS.xhr`call by strong typed (yeap, Intellisense support!) Netflix.context
+1. Adding Odata [`$select=ShortName,BoxArt`][3] to reduce amount of OData traffic
+2. Added [required files][4] to work with JayData
+3. Replaced `WinJS.xhr` call by strong typed (yeap, Intellisense support!) [Netflix.context][5]
 
 
 
