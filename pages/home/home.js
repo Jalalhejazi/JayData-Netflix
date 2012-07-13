@@ -1,4 +1,8 @@
-﻿(function () {
+﻿/// <reference path="/js/j.js" /> 
+/// <reference path="/js/jaydata.js" />
+/// <reference path="/js/jaydata-vsdoc.js" /> 
+/// <reference path="/js/netflix.js" />
+(function () {
     "use strict";
 
     WinJS.UI.Pages.define("/pages/home/home.html", {
@@ -17,17 +21,20 @@
             list.groupDataSource = titlesListGrouped.groups.dataSource;
             list.groupHeaderTemplate = q("#headertemplate");
 
-            WinJS.xhr({ url: "http://odata.netflix.com/Catalog/Titles?$format=json&$select=ShortName,BoxArt&$top=200" })
-                .then(function (xhr) {
-                    var titles = JSON.parse(xhr.response).d;
-                    titles.forEach(function (i) {
-                        titlesListGrouped.push({
-                            title: i.ShortName,
-                            imageUrl: i.BoxArt.LargeUrl
-                        });
-                    });
+            Netflix.context.Titles
+            .map(function(item) {
+                return {
+                    title: item.ShortName,
+                    BoxArt: item.BoxArt
+                };
+            })
+            .take(200)
+            .forEach(function(item) {
+                titlesListGrouped.push({
+                    title: item.title,
+                    imageUrl: item.BoxArt.LargeUrl
                 });
-
+            })
         }
     });
 })();
